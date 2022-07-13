@@ -6,16 +6,14 @@
 body {
 
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background: yellow url(imagens/fundo.png) repeat-x;
+  background: rgb(156, 207, 235) url(imagens/fundo.png) repeat-x;
 
 }
-
 
 #container {
   width: 750px;
   margin: 0 auto;
   }
-
 
 header {
 width: 750px;
@@ -41,7 +39,18 @@ ul {
 	padding: 0;
 	list-style-type: none;
 }
+ol {
+	list-style-type: lower-roman;
+  margin: 15px;
+  padding: 0px;
 
+}
+ol li{
+	color: #666666;
+  font-size: 0.8em;
+
+  
+}
 #topo ul {
   margin-top: 30px;
   background: #b10333 ;
@@ -80,17 +89,23 @@ nav.destaque #navegacao a#destaque
   cursor: text;
 }
 
-section {
+.imagens-container-flex {
+  width: 95%;
+  border: #dc003e solid 5px;
+  padding: 1em;
+  margin-left: 15px;
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+section.index {
   background: #f5f5f5;
   margin-top: 60px;
   margin-left: 365px;
-}
-
-section.imagens {
-  background: #f5f5f5;
-  margin-top: 60px;
-  margin-left: 0px;
-  border: #dc003e solid 5px;
 }
 
 section.destaque {
@@ -115,13 +130,6 @@ section.img {
   width: 270px;
   float: left;
   margin: 0 0 20px 195px; /* 195px na esquerda para deixar um espaçamento de 180 + 15 para caber o #lateral*/
-}
-
-#primario-destaque {
-  display: block;
-  position: relative;
-  width: 100%;
-  height: 60px;
 }
 
 #primario-destaque {
@@ -262,16 +270,6 @@ footer {
 
 /* Tamanho padrão é 16px, se não colocar nada
   se eu colocasse 1em (em=unidade relativa ao seu container pai) ao invés de 14px, assumiria o padrão de 16px*/
-
-.img-avancar-arredondada {
-  height: 50px;
-  width: 80px;
-  border-radius: 20px;
-  padding: 10px;
-  border: 2px solid black;
-  margin-top: 25px;
-  background-color: white;
-}
 
 .column {
   float: left;
