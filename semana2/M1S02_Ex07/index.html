@@ -42,13 +42,14 @@
                         <h2>Temática</h2>
 
                         <div class="caixa-conteudo">
-
-                            <h6> M1S02_Ex6 - Ação: adicionar um footer contendo: </h6>
+                            
+                            <h6> M1S02_Ex7 - Ação: evento de click ao botão enviar do formulário contato ref. exercício 5. </h6>
                                 <ol>
-                                    <li>Informações para contato, endereço, e demais informações ...</li>
-                                    <li>Informações de copyright 
-                                    <li>Deve ficar no final da página mas não deve ser fixo</li>
-                                    <li>Deve ser utilizado HTML semântico</li>
+                                    <li>Desenvolver código JavaScript para exibição no (console.log). <br>
+                                        Os dados digitados no formulário com o seguinte formato: <br> <br>
+                                        Nome: xxx <br> E-mail: xxx <br> Descriçao: xxx </li> <br>
+                                    <li>Deve ficar no final da página mas não deve ser fixo</li> <br>
+                                    <li>Deve ser exibido alerta para o usuário que o formulário foi enviado com sucesso. (alert)</li>
                                 </ol>
                         </div>
 
@@ -99,36 +100,21 @@
                     <h2>Contato</h2>
 
                     <div class="caixa-conteudo">
-                        <form name="formCadastro" onsubmit="return validarFormulario()">
-                            <label for="nome">Informe o seu Nome:</label>
-                            <input type="text" name="nome" placeholder="Nome completo"> 
+                        <form name="formCadastro">
+                            <label for="nome">Seu Nome:</label>
+                            <input type="text" name="nome" id="nomeCompleto" placeholder="Nome completo"> 
                             
                             <label for="Descricao">Descrição:</label>
-                            <input type="text" name="endereco" id="endereco" placeholder="Motivo contato">
+                            <input type="text" name="endereco" id="motivoContato" placeholder="Motivo contato">
 
                             <label for="email">Email:</label>
-                            <input type="email" name="email" id="email" placeholder="E-mail">
+                            <input type="email" name="email" id="e-mail" placeholder="E-mail">
                             
-                            <input class="submit" type="submit" value="Enviar">
+                            <input class="submit" type="button" value="Enviar" onclick="validarFormulario()">
 
                         </form>
-
-                        <script>
-                            function validarFormulario(){
-                                var nomePessoa = document.forms["formCadastro"]["nome"].value;
-                                var enderecoPessoa = document.forms["formCadastro"]["endereco"].value;
-                                var emailPessoa = document.forms["formCadastro"]["email"].value;
-                                if (nomePessoa == "" || enderecoPessoa == "" || emailPessoa == "")  {
-                                    alert("Favor informar o seu nome, endereço e e-mail!");
-                                    return false;     
-                                }
-                                else{
-                                    alert("Olá, " + nomePessoa + ", informações enviadas com sucesso!");
-                                    return true;
-                                }
-                            }
-                        </script>
-
+                        
+                        <script src="funcao-console-log.js"></script>
                         
                     </div>
                 </div>
